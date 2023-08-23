@@ -29,11 +29,26 @@ public class Start_Conta {
 			
 			conta = new Conta(donoConta, numeroDaConta, depositoInicialSim);
 		}else {
-			conta = new Conta(seraQueVaiTerDeposito, numeroDaConta);
+			conta = new Conta(donoConta, numeroDaConta);
 		}
+		
+		//Exibir dados da conta
 		
 		JOptionPane.showMessageDialog(null, conta, "Dados da conta", JOptionPane.INFORMATION_MESSAGE);
 		
+		// Solicitando um deposito
+		
+		double depositoEmConta = Double.parseDouble(JOptionPane.showInputDialog(null, "Informe o valor do Deposito", "Deposito em Conta", JOptionPane.PLAIN_MESSAGE));
+		conta.depositar(depositoEmConta);
+		
+		JOptionPane.showMessageDialog(null, conta, "Dados da conta", JOptionPane.INFORMATION_MESSAGE);
+		
+		// Solicitando um saque
+		
+		double saque = Double.parseDouble(JOptionPane.showInputDialog(null, "Informe o valor que deseja Sacar", "Saque", JOptionPane.PLAIN_MESSAGE));
+		conta.sacar(saque);
+		
+		JOptionPane.showMessageDialog(null, conta, "Dados da conta", JOptionPane.INFORMATION_MESSAGE);
 	}
 
 }
