@@ -14,7 +14,7 @@ public class Conta {
 	private String titularDaConta;
 
 	// saldo da conta
-	private Double saldoDaConta;
+	protected Double saldoDaConta;
 
 	// construtor
 	public Conta() {

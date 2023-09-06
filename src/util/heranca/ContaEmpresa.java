@@ -63,7 +63,7 @@ public class ContaEmpresa extends Conta {
 	public void emprestimo(double quantidade) {
 		if (quantidade <= limiteEmprestimo) {
 			depositar(quantidade);
-			System.out.println("O valor de " + quantidade + " Foi adicioando a sua conta!!");
+			System.out.println("O valor de R$" + quantidade + " Foi adicioando a sua conta!!");
 		} else {
 			System.out.println("O valor limite do empréstimo é de R$1000,00");
 			emprestimo(quantidade);
